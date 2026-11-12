@@ -1,0 +1,13 @@
+TARGET = gtasa_proto
+OBJS = src/main.o
+
+CFLAGS = -O2 -G0 -Wall
+CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
+
+LIBS = -lpspdebug -lpspdisplay -lpspctrl -lpspkernel
+
+EXTRA_TARGETS = EBOOT.PBP
+BUILD_PRX = 1
+PSP_EBOOT_TITLE = Open World PSP Prototype
+
+include $(PSPSDK)/lib/build.mak
